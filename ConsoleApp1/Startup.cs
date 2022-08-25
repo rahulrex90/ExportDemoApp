@@ -22,7 +22,9 @@ namespace ConsoleApp1
             var feedData = new List<feed>();
             var productData = new List<Product>();
             Console.WriteLine("Please Choose The Source Site");
+            Console.WriteLine(" ");
             Console.WriteLine("Press 1 for Capterra  or  2  for Softwareadvice ");
+            Console.WriteLine(" ");
 
             try
             {
@@ -33,8 +35,9 @@ namespace ConsoleApp1
                     {
 
                         continuepar = true;
-
+                        Console.WriteLine(" ");
                         Console.WriteLine("Please enter a valid file path");
+                        Console.WriteLine(" ");
                         filePath = Console.ReadLine();
 
                         filename = Path.GetFileName(filePath);
@@ -61,6 +64,7 @@ namespace ConsoleApp1
                     else
                     {
                         Console.WriteLine("Invalid input. Please enter 1 or 2.");
+                        Console.WriteLine(" ");
                     }
 
                 }
@@ -83,6 +87,7 @@ namespace ConsoleApp1
 
                 foreach (var item in feedData)
                 {
+                    Console.WriteLine(" ");
                     Console.WriteLine($"importing Feed: Name: {item.name};  Categories: {item.tags}, Development Tools; Twitter: {item.twitter}");
                     Console.WriteLine("********************************************************************************************************");
 
@@ -93,6 +98,7 @@ namespace ConsoleApp1
                 // print product Data
                 foreach (var item in productData)
                 {
+                    Console.WriteLine(" ");
                     Console.WriteLine($"importing Product: Title: {item.title};  Categories: {string.Join(",", item.categories)}, Development Tools; Twitter: {item.twitter}");
                     Console.WriteLine("********************************************************************************************************");
                 }

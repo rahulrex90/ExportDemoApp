@@ -59,6 +59,7 @@ namespace ConsoleApp1
         {
             public T ReadFile(string filePath)
             {
+                // code to implement csv files
                 throw new NotImplementedException();
             }
         }
@@ -66,7 +67,17 @@ namespace ConsoleApp1
         {
             public T ReadFile(string filePath)
             {
-                throw new NotImplementedException();
+                using (var reader = new StreamReader(filePath))
+                {
+                    var deserializer = new DeserializerBuilder()
+                                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                                .Build();
+                    var fileContent = reader.ReadToEnd();
+                    var prodList = deserializer.Deserialize<T>(fileContent);
+
+                    return prodList;
+                    // the rest
+                }
             }
         }
     }

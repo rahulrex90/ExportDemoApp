@@ -73,6 +73,7 @@ namespace ConsoleApp1.Capterra
     {
         public List<T> ReadFile(string filePath)
         {
+            // Code to read CSV Files
             throw new NotImplementedException();
         }
     }
