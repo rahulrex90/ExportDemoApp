@@ -1,0 +1,7 @@
+Summary:
+
+  - Installation steps: Mentioned in  UserManual_Guide
+  - How to run your code / tests:Mentioned in  UserManual_Guide
+  - Where to find your code:  https://github.com/rahulrex90/ExportDemoApp.git
+  - Was it your first time writing a unit test, using a particular framework, etc? No(but used long back ago)
+  - What would you have done differently if you had had more time: More Unit Test Cases, and there is a scope of more restructring and make code more readable
